@@ -5,6 +5,7 @@ const Transaction = require('./Models/Transactions.js')
 const User = require('./Models/Users.js')
 const mongoose = require('mongoose')
 const Jwt = require('jsonwebtoken')
+const PORT = process.env.PORT || 4040
 
 require('dotenv').config()
 const ConnectDb = require('./db.js')
@@ -156,4 +157,4 @@ app.get('/api/cashFlowData/:userId', async (req, resp) => {
 })
 
 
-app.listen(4040);
+app.listen(PORT);
